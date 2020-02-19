@@ -1,0 +1,465 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color: #f3e7e7;
+    text-transform: capitalize;
+    color: rgb(54, 54, 54);
+}
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.container .col {
+    margin: 20px;
+    flex: 1 0 30%;
+}
+.container .col > div {
+    background-color: #FFF;
+    border-radius: 25px;
+    align-items: center;
+    box-shadow: 5px 5px 20px 1px rgba(204, 204, 204, 0.377);
+    margin-bottom: 30px;
+}
+.container .col-md {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 65%;
+}
+.container .col-md .row {
+    display: flex;
+    justify-content: space-around;
+}
+.btn-round {
+    background-color: transparent;
+    border: 2px solid #68cecf;
+    color: #68cecf;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s; 
+}
+.btn-round:hover {
+    background-color: #68cecf;
+    color: #FFF;
+}
+.container .col ion-icon {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    font-size: 18px;
+    color: #797777;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+.plus {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    border-radius: 5px;
+    background:
+      linear-gradient(rgb(144, 81, 202),rgb(144, 81, 202)),
+      linear-gradient(rgb(144, 81, 202),rgb(144, 81, 202)),
+      rgba(164, 103, 221, 0.479);
+    background-position:center;
+    background-size: 50% 2px,2px 50%; /*thickness = 2px, length = 50% (25px)*/
+    background-repeat:no-repeat;
+    cursor: pointer;
+}
+/*=============== Start Tweet ===============*/
+.container .col .tweet {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 90px;
+}
+.container .col .tweet .person {
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+.container .col .tweet .person h3 {
+    color: #707070;
+    font-weight: 700;
+}
+.container .col .tweet .person p {
+    color: #aaaaaa;
+}
+.container .col .tweet .avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    align-self: flex-start;
+    margin-right: 15px;
+}
+.container .col span {
+    font-size: 12px;
+    align-self: flex-end;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    color: #d3d3d3;
+}
+/*=============== End Tweet ===============*/
+/*=============== Start Town ===============*/
+.container .col .town {
+    overflow: hidden;
+}
+.container .col .town img {
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 25px 15px rgba(180, 180, 180, 0.705);
+}
+.container .col .town .content {
+    display: flex;
+    justify-content:space-between;
+    position: relative;
+}
+.container .col .town .text {
+    margin: 15px;
+    font-weight: 600;
+}
+.container .col .town .text h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.container .col .town .content ion-icon {
+    position: absolute;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: ease-in-out 0.3s;
+    color: #797777;
+    cursor: pointer;
+}
+.container .col .town .content ion-icon:hover,
+.container .col ion-icon:hover {
+    background-color: rgba(216, 216, 216, 0.418);
+}
+/*=============== End Town ===============*/
+/*=============== Start Profile ===============*/
+.container .col .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    position: relative;
+}
+.container .col .profile img {
+    border: 15px solid rgb(235, 235, 235);
+    border-radius: 50%;
+    margin: 10px 15px 30px 15px;
+}
+.container .col .profile .followers {
+    display: flex;
+    padding: 15px;
+    margin: 15px;
+    align-items: flex-end;
+    text-align: center;
+    position: relative;
+}
+.container .col .profile .followers div {
+    margin: 0 20px;
+}
+.container .col .profile .followers div p {
+    font-weight: 700;
+}
+.container .col .profile .followers div span {
+    font-size: 15px;
+    font-weight: 500;
+}
+.container .col .profile .followers div:first-child::after {
+    content: "";
+    width: 2px;
+    height: 40px;
+    border-radius: 3px;
+    position: absolute;
+    top: 16px;
+    margin-left: 18px;
+    background-color: rgb(240, 240, 240);
+}
+/*=============== End Profile ===============*/
+/*=============== Start Netflix ===============*/
+.container .col .netflix {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 35px;
+}
+.container .col .netflix h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+/*=============== End Netflix ===============*/
+/*=============== Start App ===============*/
+.container .col .app {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 15px;
+}
+.container .col .app .header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.container .col .app .header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.container .col .app .header .text {
+    margin-bottom: 10px;
+}
+.container .col .app .progress-app {
+    width: 100%;
+    height: 3px !important;
+    background-color: rgb(236, 236, 236);
+    margin: 10px auto;
+    position: relative;
+}
+.container .col .app .progress-app::before {
+    content: "70%";
+    position: absolute;
+    right: 25%;
+    top: -22px;
+    font-size: 13px;
+    background-color: rgba(164, 103, 221, 0.479);
+    color: rgb(144, 81, 202);
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+.container .col .app .progress-app > div{
+    width: 70%;
+    height: 3px;
+    background-color: rgb(76, 252, 129);
+}
+.container .col .app .ongoing {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.container .col .app .ongoing button {
+    background-color: rgba(76, 252, 129, 0.425);
+    color: rgb(73, 202, 111);
+    padding: 0px 7px;
+    height: 30px;
+    border-radius: 5px;
+    border: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.container .col .app .ongoing .photos-ongoing img {
+    width: 30px;
+    border-radius: 5px;
+}
+.container .col .app .ongoing .photos-ongoing {
+    margin-right: 10px;
+}
+/*=============== End App ===============*/
+/*=============== Start Card ===============*/
+.container .col .card,
+.container .col .audi {
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    position: relative;
+}
+.container .col .card ion-icon,
+.container .col .audi ion-icon {
+    top: 30px;
+    right: 10px;
+}
+.container .col .card img,
+.container .col .audi img  {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.container .col .card .text h3,
+.container .col .audi .text h3,
+.container .col .call .content h3 {
+    font-weight: 600;
+}
+.container .col .card .text p,
+.container .col .audi .text p,
+.container .col .call .content p {
+    color: rgb(182, 182, 182);
+    text-transform: lowercase;
+}
+/*=============== End Card ===============*/
+/*=============== Start Audi ===============*/
+.container .col .audi {
+    justify-content: space-between;
+}
+.container .col .audi > div {
+    display: flex;
+    align-items: center;
+}
+.container .col .audi .btn-round {
+    padding: 10px 25px;
+    border-width: 1px;
+    color: rgb(144, 81, 202);
+    border-color: rgb(144, 81, 202);
+    font-size: 12px;
+    width: auto;
+    margin-right: 35px;
+}
+.container .col .audi .btn-round:hover {
+    background-color: rgb(144, 81, 202);
+    color: #fff;
+}
+.container .col .audi .text p {
+    text-transform: capitalize;
+}
+/*=============== End Audi ===============*/
+/*=============== Start Tools ===============*/
+.container .col .tools {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    padding: 20px;
+}
+.container .col .tools ion-icon {
+    top: 10px;
+}
+.container .col .tools h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+.container .col .tools p {
+    margin-bottom: 30px;
+}
+.container .col .tools > div {
+    display: flex;
+}
+.container .col .tools > div div {
+    display:inline-block;
+    width:30px;
+    height:30px;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 2px;
+    color: #fff;
+}
+.container .col .tools > div div:first-child {
+    background-color: rgb(75, 43, 192);
+}
+.container .col .tools > div div:nth-child(2) {
+    background-color: rgb(231, 192, 64);
+}
+.container .col .tools > div div:nth-child(3) {
+    background-color: rgb(216, 58, 236);
+}
+/*=============== End Tools ===============*/
+/*=============== Start verify ===============*/
+.container .col .verify {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-start;
+}
+.container .col .verify h3 {
+    text-transform: none;
+    margin-bottom: 20px;
+}
+.container .col .verify p {
+    color: rgb(187, 187, 187);
+    margin-bottom: 10px;
+}
+.container .col .verify input {
+    margin: 30px auto;
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 15px;
+    color: rgb(35, 53, 102);
+    background-color: rgba(174, 228, 210, 0.363);
+}
+.container .col .verify input:focus {
+    outline: none;
+}
+.container .col .verify button {
+    margin: 10px auto;
+    background-color: transparent;
+    color: rgb(144, 81, 202);
+    font-size: 15px;
+    border: 0 none;
+    cursor: pointer;
+}
+/*=============== End verify ===============*/
+/*=============== Start Call ===============*/
+.container .col .call,
+.container .col .direction {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    position: relative;
+}
+.container .col .call .content,
+.container .col .direction .content  {
+    display: flex;
+    align-items: center;
+}
+.container .col .call .content img,
+.container .col .direction .content img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.container .col .call ion-icon,
+.container .col .direction ion-icon {
+    top: 35px
+}
+.container .col .direction .btn-round {
+    width: 150px;
+    margin-right: 50px;
+    border-width: 1px;
+    color: rgb(144, 81, 202);
+    border-color: rgb(144, 81, 202);
+}
+.container .col .direction .btn-round:hover,
+.container .col .call .btns-group .btn-round:hover {
+    background-color: rgb(144, 81, 202);
+    color: #fff;
+}
+.container .col .call .btns-group {
+    display: flex;
+    margin-right: 50px;
+}
+.container .col .call .btns-group .btn-round {
+    width: 150px;
+    color: rgb(144, 81, 202);
+    border-color: rgb(144, 81, 202);
+    border-width: 1px;
+}
+.container .col .call .btns-group .btn-round:first-child {
+    border-radius: 25px 0 0 25px;
+}
+.container .col .call .btns-group .btn-round:last-child {
+    border-radius: 0 25px 25px 0;
+}
+/*=============== End Call ===============direction*/
