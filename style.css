@@ -15,9 +15,17 @@ body {
     display: flex;
     flex-wrap: nowrap;
 }
+@media (max-width: 1300px) {
+    .container {
+    flex-wrap: wrap;
+    }
+    .container .col-md .row {
+    flex-wrap: wrap;
+    }
+}
 .container .col {
     margin: 20px;
-    flex: 1 0 30%;
+    flex: 1 1 32%;
 }
 .container .col > div {
     background-color: #FFF;
@@ -29,7 +37,7 @@ body {
 .container .col-md {
     display: flex;
     flex-direction: column;
-    flex: 1 0 65%;
+    flex: 1 1 65%;
 }
 .container .col-md .row {
     display: flex;
