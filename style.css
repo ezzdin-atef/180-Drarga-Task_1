@@ -15,14 +15,6 @@ body {
     display: flex;
     flex-wrap: nowrap;
 }
-@media (max-width: 1300px) {
-    .container {
-    flex-wrap: wrap;
-    }
-    .container .col-md .row {
-    flex-wrap: wrap;
-    }
-}
 .container .col {
     margin: 20px;
     flex: 1 1 32%;
@@ -38,6 +30,7 @@ body {
     display: flex;
     flex-direction: column;
     flex: 1 1 65%;
+    min-width: 0;
 }
 .container .col-md .row {
     display: flex;
@@ -430,7 +423,7 @@ body {
     cursor: pointer;
 }
 /*=============== End verify ===============*/
-/*=============== Start Call ===============*/
+/*=============== Start Call & direction ===============*/
 .container .col .call,
 .container .col .direction {
     display: flex;
@@ -482,4 +475,21 @@ body {
 .container .col .call .btns-group .btn-round:last-child {
     border-radius: 0 25px 25px 0;
 }
-/*=============== End Call ===============direction*/
+/*=============== End Call & direction ===============*/
+
+@media (max-width: 1300px) {
+    .container {
+    flex-wrap: wrap;
+    }
+    .container .col-md .row {
+    flex-wrap: wrap;
+    }
+    .container .col .call {
+        flex-wrap: wrap;
+    }
+}
+@media (max-width: 720px) {
+    .container .col .call .btns-group {
+        margin-top: 15px;
+    }
+}
