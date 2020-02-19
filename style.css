@@ -83,6 +83,9 @@ body {
     padding: 10px;
     height: 90px;
 }
+.container .col .tweet.dark {
+    background-color: rgb(21, 22, 58);
+}
 .container .col .tweet .person {
     display: flex;
     align-items: center;
@@ -90,10 +93,10 @@ body {
 }
 .container .col .tweet .person h3 {
     color: #707070;
-    font-weight: 700;
+    font-weight: 500;
 }
 .container .col .tweet .person p {
-    color: #aaaaaa;
+    color: #acacac;
 }
 .container .col .tweet .avatar {
     width: 70px;
@@ -109,6 +112,15 @@ body {
     margin-bottom: 5px;
     margin-right: 10px;
     color: #d3d3d3;
+}
+.container .col .tweet.dark h3 {
+    color: #d3d3d3;
+}
+.container .col .tweet.dark p {
+    color: #6b6b80;
+}
+.container .col .tweet.dark span {
+    color: #515169;
 }
 /*=============== End Tweet ===============*/
 /*=============== Start Town ===============*/
